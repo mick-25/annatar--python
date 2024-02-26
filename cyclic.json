@@ -1,5 +1,0 @@
-{
-  "builds": [
-    { "src": "index.js", "use": "@cyclic/static-builder" }
-  ]
-}
