@@ -1,13 +1,13 @@
 {
-  "functions": {
-    "api/**/*.py": {
-      "runtime": "python3.9"
-    }
-  },
+  "name": "annatar",
   "builds": [
-    { 
-      "src": "index.py",
-      "use": "@vercel/python"
+    {
+      "src": "Dockerfile",
+      "use": "@cyclic/builders-docker",
+      "config": {
+        "runtime": "python3.11",
+        "libs": ["uvicorn"]
+      }
     }
   ],
   "env": {
@@ -18,4 +18,3 @@
     "NUM_WORKERS": "4"
   }
 }
-
