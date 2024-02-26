@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "api/**/*.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "builds": [
+    { "src": "index.py", "use": "@vercel/python" }
+  ],
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUNBUFFERED": "1",
+    "POETRY_VERSION": "1.7.1",
+    "DB_PATH": "/app/data/annatar.db",
+    "NUM_WORKERS": "4"
+    // Add any other environment variables here
+  }
+}
